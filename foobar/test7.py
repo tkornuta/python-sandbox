@@ -4,6 +4,11 @@ def greedy_find_path(entrance, exits, corridors):
     """ Find ANY path connecting input and output, """
     print("corridors at start: ",  corridors)
     #max_flow = float("inf")
+
+    # Not the case.
+    #if entrance in exits:
+    #    return 1/0
+        
     cur_pos = entrance
     path = []
     max_flows = []
@@ -15,6 +20,7 @@ def greedy_find_path(entrance, exits, corridors):
         not_visited_corridors[cur_pos][entrance] = 0
         for visited in path:
             not_visited_corridors[cur_pos][visited] = 0
+        print("not_visited_corridors: ",  not_visited_corridors)
             
         # Find max flow in remaining corridors.
         max_flow = max(not_visited_corridors[cur_pos])
@@ -29,15 +35,14 @@ def greedy_find_path(entrance, exits, corridors):
         print ("max_flows = ",  max_flows)
         # Move! ;)
         cur_pos = corridor
-    print ("path = ",  path)
-    print ("max_flows = ",  max_flows)
+    print ("whole path = ",  path)
+    print ("whole max_flows = ",  max_flows)
     min_flow  = min(max_flows)
     # Check whether there  in fact is any flow!
-    # Cannot do it - have to reverse "temporarily used corridors".
-    #if min_flow == 0:
-    #    return 0;
+    if min_flow == 0:
+        return 0;
         
-    # "Realize" flow from entrance to exit.
+    # "Realize" flow from entrance to exit - in original corridors!
     print ("sending {} bunnies from {} through {}".format(min_flow,  entrance,  path))
     cur_pos = entrance
     for corridor, max_flow in zip(path,  max_flows):
@@ -47,9 +52,24 @@ def greedy_find_path(entrance, exits, corridors):
     # Return number of bunnies that reached the escape pods;)
     return min_flow
 
-
 def answer(entrances, exits, corridors):
     # your code here
+ 
+    # Not the case.
+    #if not entrances:
+    #    return 1/0
+
+    # Not the case.
+    #if not exits:
+    #    return 1/0
+ 
+    # Not the case.
+    # Limit all flows to 2000000.
+    #for i in range(len(corridors)):
+    #    for j in range(len(corridors)):
+    #        if corridors[i][j] > 2000000:
+    #            return 1/0
+        
     
     # Sum of all realised flows.
     flow_sum = 0
@@ -65,7 +85,7 @@ def answer(entrances, exits, corridors):
 
 if __name__ == "__main__":
     
-    test = 2
+    test = 4
     
     if test == 1:
         entrances = [0]
@@ -86,6 +106,10 @@ if __name__ == "__main__":
         entrances = [0]
         exits = [3]
         path = [[0, 7, 0, 0], [0, 0, 6, 0], [0, 8, 0, 2], [9, 0, 0, 0]]
+    elif test == 4:
+        entrances = []
+        exits = [3]
+        path = [[0, 7, 0, 0], [0, 0, 6, 0], [0, 0, 0, 8], [9, 0, 0, 0]]
 
     print(answer(entrances, exits, path)) 
     #print(answer("2",  "1001")) 
