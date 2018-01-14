@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project foobar -->
-<!-- Saved: 2017-11-03, 09:28:23 -->
-<!-- Copyright (C) 2017 ,  -->
+<!-- Saved: 2018-01-13, 17:13:12 -->
+<!-- Copyright (C) 2018 ,  -->
 <Project version="5.1">
   <Language>en_US</Language>
   <Hash>1febdb36b671196c7612c502608f630ff01cc4e7</Hash>
@@ -14,6 +14,7 @@
   <Eol index="0"/>
   <Sources>
     <Source>__init__.py</Source>
+    <Source>test5_v3.py</Source>
   </Sources>
   <Forms/>
   <Translations/>
