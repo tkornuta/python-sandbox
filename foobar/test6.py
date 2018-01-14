@@ -61,8 +61,6 @@ def recurseB(reqF,  reqM,  curF,  curM,  cur_depth,  best_depth):
 
 def answer(M, F):
     # your code here
-
-    
     M = int(M)
     print("M=", M)
     F = int(F)
