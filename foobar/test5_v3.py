@@ -1,5 +1,3 @@
-#import copy
-
 def total_xor(a):
     """ Calculates the XOR total run from [0, a] """
     # Special case:
