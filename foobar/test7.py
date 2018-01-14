@@ -10,27 +10,40 @@ def greedy_find_path(entrance, exits, corridors):
     #    return 1/0
         
     cur_pos = entrance
-    path = []
-    max_flows = []
+    path = [entrance]
+    max_flows = [2000000]
     # Create a local copy of corridors leading to not visited rooms.
     not_visited_corridors = copy.deepcopy(corridors)
     # Find path - greedy select corridors with biggest flows.
     while (cur_pos not in exits):
-        # Remove all corridors leading to visited rooms, including entrance!
+        # Remove all corridors leading to visited rooms, including entrance and "recurrent corridors"!
         not_visited_corridors[cur_pos][entrance] = 0
-        for visited in path:
-            not_visited_corridors[cur_pos][visited] = 0
+        not_visited_corridors[cur_pos][cur_pos] = 0 # recurrent
+        #for visited in path:
+        #    not_visited_corridors[cur_pos][visited] = 0
         print("not_visited_corridors: ",  not_visited_corridors)
             
         # Find max flow in remaining corridors.
         max_flow = max(not_visited_corridors[cur_pos])
-        max_flows.append(max_flow)
-        # If there is no flow - break!
-        if max_flow == 0:
-            break
-        # "Select that corridor.
         corridor = not_visited_corridors[cur_pos].index(max_flow)
+        print ("found corridor {} with flow {}".format(corridor,  max_flow))
+        # Reset that path.
+        not_visited_corridors[cur_pos][corridor] = 0
+        # If there is no flow - move back!
+        if max_flow == 0:
+            # Move back.
+            path.pop()
+            max_flows.pop()
+            # if we came back to entrance - there is no other path.
+            if not path:
+                return 0
+            cur_pos = path[-1]
+            print ("moving back to ",  cur_pos)
+            continue
+        # "Select that corridor.
+        max_flows.append(max_flow)
         path.append(corridor)
+        print ("selecting corridor {} with flow {}".format(corridor,  max_flow))
         print ("path = ",  path)
         print ("max_flows = ",  max_flows)
         # Move! ;)
@@ -69,7 +82,6 @@ def answer(entrances, exits, corridors):
     #    for j in range(len(corridors)):
     #        if corridors[i][j] > 2000000:
     #            return 1/0
-        
     
     # Sum of all realised flows.
     flow_sum = 0
@@ -85,7 +97,7 @@ def answer(entrances, exits, corridors):
 
 if __name__ == "__main__":
     
-    test = 4
+    test = 2
     
     if test == 1:
         entrances = [0]
@@ -107,9 +119,13 @@ if __name__ == "__main__":
         exits = [3]
         path = [[0, 7, 0, 0], [0, 0, 6, 0], [0, 8, 0, 2], [9, 0, 0, 0]]
     elif test == 4:
-        entrances = []
+        entrances = [0]
         exits = [3]
-        path = [[0, 7, 0, 0], [0, 0, 6, 0], [0, 0, 0, 8], [9, 0, 0, 0]]
+        path = [[9, 2, 7, 0], [0, 120, 0, 60], [0, 0, 2, 0], [9, 0, 0, 0]]
+    elif test == 5:
+        entrances = [0, 1]
+        exits = [3]
+        path = [[0, 20, 7, 0], [0, 0, 120, 20], [0, 0, 2, 0], [9, 0, 0, 0]]
 
     print(answer(entrances, exits, path)) 
     #print(answer("2",  "1001")) 

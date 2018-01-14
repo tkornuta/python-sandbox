@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project foobar -->
-<!-- Saved: 2018-01-13, 17:13:12 -->
+<!-- Saved: 2018-01-14, 00:31:17 -->
 <!-- Copyright (C) 2018 ,  -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -15,6 +15,7 @@
   <Sources>
     <Source>__init__.py</Source>
     <Source>test5_v3.py</Source>
+    <Source>test7.py</Source>
   </Sources>
   <Forms/>
   <Translations/>
