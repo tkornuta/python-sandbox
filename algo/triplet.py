@@ -11,3 +11,4 @@ def triplet(lst):
 if __name__ == "__main__":
     lst = [3, 1, 4, 6, 5]
     print(triplet(lst))
+
