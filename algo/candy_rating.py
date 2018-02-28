@@ -1,3 +1,4 @@
+# https://www.programcreek.com/2014/03/leetcode-candy-java/
 
 def give_candies(ratings):
     

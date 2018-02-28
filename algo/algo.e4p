@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project algo -->
-<!-- Saved: 2018-02-23, 12:19:34 -->
+<!-- Saved: 2018-02-27, 16:06:24 -->
 <!-- Copyright (C) 2018 ,  -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -15,12 +15,14 @@
   <Sources>
     <Source>__init__.py</Source>
     <Source>binary_tree_to_dll.py</Source>
+    <Source>candy_rating.py</Source>
     <Source>inplace_rotate_square_matrix.py</Source>
     <Source>k_largest_elements.py</Source>
     <Source>next_str.py</Source>
     <Source>product_q1.py</Source>
     <Source>reverse_individual_words.py</Source>
     <Source>special_stack.py</Source>
+    <Source>tapping_water.py</Source>
     <Source>triplet.py</Source>
   </Sources>
   <Forms/>
