@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project algo -->
-<!-- Saved: 2018-03-02, 13:08:06 -->
+<!-- Saved: 2018-03-09, 12:39:39 -->
 <!-- Copyright (C) 2018 ,  -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -19,6 +19,7 @@
     <Source>evaluate_reverse_polish_notation.py</Source>
     <Source>inplace_rotate_square_matrix.py</Source>
     <Source>k_largest_elements.py</Source>
+    <Source>longest_substring.py</Source>
     <Source>next_str.py</Source>
     <Source>product_q1.py</Source>
     <Source>reverse_individual_words.py</Source>
