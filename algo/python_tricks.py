@@ -1,3 +1,5 @@
+# https://docs.python.org/2/howto/functional.html
+
 import itertools
 
 A = list(zip([1,3,5,7,9],[2,4,6,8,10]))
