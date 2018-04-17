@@ -27,3 +27,34 @@ print ("F: " + str(F))
 #S = set(((2, 2), (3, 5), 5, 7, 11, 13))
 #for i in S:
 #    print (i)
+
+# MAP
+items = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x**2, items))
+print(squared)
+def multiply(x):
+    return (x*x)
+def add(x):
+    return (x+x)
+
+funcs = [multiply, add]
+for i in range(5):
+    value = list(map(lambda x: x(i), funcs))
+    print(value)
+
+# FILTER
+number_list = range(-5, 5)
+print(number_list)
+less_than_zero = list(filter(lambda x: x < 0, number_list))
+print(less_than_zero)
+
+# REDUCE
+product = 1
+my_list = list(range(1, 5))
+for num in my_list:
+    product = product * num
+print(product)
+
+from functools import reduce
+product = reduce((lambda x, y: x * y), my_list)
+print(product)

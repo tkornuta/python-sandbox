@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project algo -->
-<!-- Saved: 2018-03-17, 17:17:14 -->
+<!-- Saved: 2018-04-15, 14:08:36 -->
 <!-- Copyright (C) 2018 ,  -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -24,9 +24,11 @@
     <Source>next_str.py</Source>
     <Source>product_q1.py</Source>
     <Source>python_tricks.py</Source>
+    <Source>quicksort.py</Source>
     <Source>reverse_individual_words.py</Source>
     <Source>rotate_array.py</Source>
     <Source>special_stack.py</Source>
+    <Source>spiral_matrix.py</Source>
     <Source>tapping_water.py</Source>
     <Source>triplet.py</Source>
     <Source>ugly_number.py</Source>
