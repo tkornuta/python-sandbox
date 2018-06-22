@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project algo -->
-<!-- Saved: 2018-04-15, 14:08:36 -->
+<!-- Saved: 2018-04-17, 10:32:41 -->
 <!-- Copyright (C) 2018 ,  -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -16,6 +16,7 @@
     <Source>__init__.py</Source>
     <Source>binary_tree_to_dll.py</Source>
     <Source>candy_rating.py</Source>
+    <Source>check_graph_path.py</Source>
     <Source>evaluate_reverse_polish_notation.py</Source>
     <Source>inplace_rotate_square_matrix.py</Source>
     <Source>k_largest_elements.py</Source>
