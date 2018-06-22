@@ -8,13 +8,13 @@
 def partition(arr,low,high):
     print("Partition: low={} high={}".format(low, high))
     i = ( low-1 )         # index of smaller element
-    pivot = arr[high]     # pivot
+    pivot_val = arr[high]     # pivot value
  
     for j in range(low , high):
  
         # If current element is smaller than or
         # equal to pivot
-        if   arr[j] <= pivot:
+        if   arr[j] <= pivot_val:
          
             # increment index of smaller element
             i = i+1
