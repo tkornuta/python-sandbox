@@ -62,8 +62,31 @@ def binary_add2(d1,d2):
     print("r:  {0:b}".format(d1))
     return d1
 
+
+# Idea: split into two sets: repeating and unique bits. 
+# Repeating biths are shifted.
+# Repeat until there are no repeating bits.
+def binary_add3(d1,d2):
+    print("d1: {0:b}".format(d1))
+    print("d2: {0:b}".format(d2))
+
+    while d2:
+        # AND: Calculate repeating bits - we will have to shift them to left.
+        c = d1 & d2
+        print("c : {0:b}".format(c))
+        # XOR: those are unique bits - they stay.
+        d1 = d1 ^ d2 
+        # Shifting.
+        d2 =  c << 1
+        print("d1: {0:b}".format(d1))
+        print("d2: {0:b}".format(d2))
+        
+    print("r:  {0:b}".format(d1))
+    return d1
+
+
 if __name__ == "__main__":
     d1 = 5
-    d2 = 5
-    print(binary_add2(d1,d2))
+    d2 = 7
+    print(binary_add3(d1,d2))
 
