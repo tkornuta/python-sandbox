@@ -1,0 +1,2 @@
+http://effbot.org/zone/thread-synchronization.htm
+

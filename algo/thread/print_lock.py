@@ -1,3 +1,5 @@
+# https://www.youtube.com/watch?v=NwH0HvMI4EA
+
 import threading
 from queue import Queue
 import time
