@@ -1,3 +1,5 @@
 http://effbot.org/zone/thread-synchronization.htm
 
+https://hackernoon.com/synchronization-primitives-in-python-564f89fee732
+
 https://www.bogotobogo.com/python/Multithread/
