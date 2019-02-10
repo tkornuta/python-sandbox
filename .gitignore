@@ -1,2 +1,3 @@
-panda/data
-panda/data2
+*.pyc
+.vscode
+/algo-cpp/.vscode/
