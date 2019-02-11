@@ -5,6 +5,6 @@ This repository contain my python sandbox, i.e. several projects that I have dev
 Everything here is distributed under the Apache v2 license.
 
 ## Maintainer
-* [tkornuta](tkornuta@gmail.com)
+* [tkornuta](https://github.com/tkornuta)
 
 [![HitCount](http://hits.dwyl.io/tkornuta/tkornuta/python-sandbox.svg)](http://hits.dwyl.io/tkornuta/tkornuta/python-sandbox)
