@@ -161,6 +161,12 @@ class Board(object):
         # Bomb keys.
         elif key in ['f', 'F']:
             self.board_user_mines[self.cur_y][self.cur_x] = (not self.board_user_mines[self.cur_y][self.cur_x])
+            # Check terminal condition.
+            if self.discovered_all():
+                # Unreveil all.
+                self.print_board_final()
+                print("CONGRATULATIONS! (you win)")
+                return False
         # Exit keys
         elif key in ['q','Q', keys.ESCAPE]:
             return False
@@ -213,7 +219,7 @@ class Board(object):
         if self.board_mines[self.cur_y][self.cur_x]:
             # Unreveil all.
             self.print_board_final()
-            print("KABOOM! (you loose)")
+            print("KABOOM! (you lose)")
             return False
         # Unreveil all possible positions staring from current.
         self.unreveil_recursive(self.cur_y, self.cur_x)
@@ -234,13 +240,13 @@ if __name__ == "__main__":
         difficulty = getkey()
 
     if difficulty == 'e':
-        height = 5
-        width = 5
-        mines = 5   
+        height = 6
+        width = 6
+        mines = 4   
     elif difficulty == 'm':
         height = 8
         width = 8
-        mines = 8    
+        mines = 8   
     else:
         height = 10
         width = 10
