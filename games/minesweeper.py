@@ -233,28 +233,37 @@ class Board(object):
         return True
 
 if __name__ == "__main__":
-    difficulty = ""
-    while difficulty not in ["e","h","m"]:
-        print("Set difficulty (e[asy], m[edium], h[ard]): ")
-        # Read key.
-        difficulty = getkey()
-
-    if difficulty == 'e':
-        height = 6
-        width = 6
-        mines = 4   
-    elif difficulty == 'm':
-        height = 8
-        width = 8
-        mines = 8   
-    else:
-        height = 10
-        width = 10
-        mines = 15   
-
-    # Generate board.
-    board = Board(height, width, mines)
     while True:
-        board.print_board_discovered()
-        if not board.user_action():
-            break
+        difficulty = ""
+        while difficulty not in ["e","m","h", "q","Q", keys.ESCAPE]:
+            print("Set difficulty (e[asy], m[edium], h[ard]) (ESC or q to quit): ")
+            # Read key.
+            difficulty = getkey()
+
+        # Exit keys
+        if difficulty in ['q','Q', keys.ESCAPE]:
+            print("Bye!")
+            exit()
+        elif difficulty == 'e':
+            print("e!")
+            height = 5
+            width = 5
+            mines = 4   
+        elif difficulty == 'm':
+            print("m!")
+            height = 8
+            width  = 8
+            mines = 8   
+        else:
+            print("h!")
+            height = 10
+            width = 10
+            mines = 15   
+        
+        # Generate board.
+        print("Generating board {}x{} with {} mines...".format(height, width, mines))
+        board = Board(height, width, mines)
+        while True:
+            board.print_board_discovered()
+            if not board.user_action():
+                break
