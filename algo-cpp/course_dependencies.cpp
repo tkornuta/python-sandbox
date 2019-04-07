@@ -53,9 +53,10 @@ bool start_exploring(){
       }//: for path
       cout << endl;
       // That's all folks.
-      break;
+      return true;
     }//: if 
   }//: for all nodes
+  return false;
 }
 
 
