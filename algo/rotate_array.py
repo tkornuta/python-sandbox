@@ -44,7 +44,7 @@ def swap_symmetric(arr,  i, first,  arl):
     
 def rotate_list2(arr,k):
     """ Found idea: Use three reverses.
-    O(1) space and O(2*n) time
+    O(1) space and O(2*n) time => o(n)
     """
     # Length of array.
     arl = len(arr)
