@@ -7,5 +7,3 @@ Everything here is distributed under the Apache v2 license.
 
 ## Maintainer
 * [tkornuta](https://github.com/tkornuta)
-
-[![HitCount](http://hits.dwyl.io/tkornuta/tkornuta/python-sandbox.svg)](http://hits.dwyl.io/tkornuta/tkornuta/python-sandbox)
